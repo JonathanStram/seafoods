@@ -35,11 +35,11 @@
                 </div>
 
                 <div class="navb-links">
-                    <a class="nav-link nav-bar-links" href="index.blade.php">ГЛАВНАЯ</a>
-                    <a class="nav-link nav-bar-links" href="#">МЕНЮ</a>
+                    <a class="nav-link nav-bar-links" href="index.html">ГЛАВНАЯ</a>
+                    <a class="nav-link nav-bar-links" href="menu.html">МЕНЮ</a>
                     <!-- logo -->
-                    <a class="logo" href="index.blade.php"><img src="img/svg/Logo.svg" alt=""></a>
-                    <a class="nav-link nav-bar-links" href="recipie.blade.php">РЕЦЕПТЫ</a>
+                    <a class="logo" href="index.html"><img src="img/svg/Logo.svg" alt=""></a>
+                    <a class="nav-link nav-bar-links" href="recipie.html">РЕЦЕПТЫ</a>
                     <a class="nav-link nav-bar-links" href="#">О НАС</a>
                     <!-- <button class="btn button-outline  my-2 my-sm-0 mobile-mod" onchange="navbar()" type="submit">Контакты</button> -->
 
@@ -169,141 +169,138 @@
     </header>
 
 
-    <section class="menu-section">
+
+    <section class="recipie-section">
         <div class="container">
-            <section class="menu-tab-wrapper">
-                <ul class="tabs">
-                    <li class="tabs-li active">
-                        <h5 class="active-menu-text">Мясо</h5>
-                    </li>
-                    <li class="tabs-li ">
-                        <h5 class="active-menu-text">Соусы</h5>
-                    </li>
-                    <li>
-                        <h5 class="active-menu-text">Криветки</h5>
-                    </li>
-                    <li>
-                        <h5 class="active-menu-text">Вино</h5>
-                    </li>
-                    <li>
-                        <h5 class="active-menu-text">Пиво</h5>
-                    </li>
-                    <li>
-                        <h5 class="active-menu-text">Маринад</h5>
-                    </li>
+            <div class="tab-section">
+                <ul class="tab-button-area">
+                    <li class="tab-button active">Популярные</li>
+                    <li class="tab-button">Новые</li>
+                    <li class="tab-button">Рекомендуем</li>
                 </ul>
-                <hr>
 
-                <ul class="tab__content">
-                    <li class="active">
-                        <div class="content__wrapper product-wrapper">
-                            <div class="products-menu__items">
-                                <img src="./img/shrimps.jpg" alt="">
-                                <h2 class="product-prise">426 <span>грн</span> </h2>
-                                <button class="order-btn modal-popup">Show</button>
-                            </div>
-                            <div class="products-menu__items">
-                                <img src="./img/mussels.jpg" alt="">
-                                <h2 class="product-prise">426 <span>грн</span> </h2>
-                                <button class="order-btn modal-popup1">Show</button>
-                            </div>
-                            <div class="products-menu__items">
-                                <img src="./img/tuna.jpg" alt="">
-                                <h2 class="product-prise">426 <span>грн</span> </h2>
+                <div class=" portfolio-container-wrapper">
+                    <div id="on-items-bucket"></div>
+                    <div id="off-items-bucket" class="portfolio-container show">
+                        <div class="portfolio__item" data-category="popular">
+                            <div class="portfolio__card">
+                                <img class="portfolio__image" src="./img/recepie1.png" alt="portfolio">
                                 <button class="order-btn ">Show</button>
-                            </div>
-                            <div class="products-menu__items">
-                                <img src="./img/solomon2.jpg" alt="">
-                                <h2 class="product-prise">426 <span>грн</span> </h2>
-                                <button class="order-btn ">Show</button>
-                            </div>
-                            <div class="products-menu__items">
-                                <img src="./img/solomon2.jpg" alt="">
-                                <h2 class="product-prise">426 <span>грн</span> </h2>
-                                <button class="order-btn ">Show</button>
-                            </div>
-                            <div class="products-menu__items">
-                                <img src="./img/tuna.jpg" alt="">
-                                <h2 class="product-prise">426 <span>грн</span> </h2>
-                                <button class="order-btn ">Show</button>
-                            </div>
-                            <div class="products-menu__items">
-                                <img src="./img/shrimps.jpg" alt="">
-                                <h2 class="product-prise">426 <span>грн</span> </h2>
-                                <button class="order-btn ">Show</button>
-                            </div>
-                            <div class="products-menu__items">
-                                <img src="./img/mussels.jpg" alt="">
-                                <h2 class="product-prise">426 <span>грн</span> </h2>
-                                <button class="order-btn ">Show</button>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content__wrapper product-wrapper">
 
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content__wrapper product-wrapper">
-                            <!-- <h2 class="text-color">About</h2> -->
-                            <!-- <p>Created by <a class="text-color" href="http://lewihussey.com" target="_blank">Lewi Hussey</a></p> -->
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content__wrapper">
-                            <!-- <h2 class="text-color">
-                                wine
-                            </h2> -->
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content__wrapper">
-                            <!-- <h2 class="text-color">
-                                gravy
-                            </h2> -->
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content__wrapper">
-                            <!-- <h2 class="text-color">
-                                beer
-                            </h2> -->
-                        </div>
-                    </li>
+                            </div>
+                            <div class="portfolio__text">
+                                <h2>Жареные креветки с перцем и чесноком</h2>
+                            </div>
+                            <div class="portfolio__rait">
 
-                </ul>
-                <ul class="tabs"></ul>
-            </section>
-            <div class="modal-frame modal-meat">
-                <div class="modal-body">
-                    <div class="modal-inner">
-                        <button id="close" class="close"><i class="fa fa-times"></i></button>
-                        <p>meat</p>
+                            </div>
+                        </div>
+                        <div class="portfolio__item" data-category="popular">
+                            <div class="portfolio__card">
+                                <img class="portfolio__image" src="./img/recepie2.png" alt="portfolio">
+                                <button class="order-btn ">Show</button>
+
+                            </div>
+                            <div class="portfolio__text">
+                                <h2>Жареные креветки с перцем и чесноком</h2>
+                            </div>
+                        </div>
+                        <div class="portfolio__item" data-category="popular">
+                            <div class="portfolio__card">
+                                <img class="portfolio__image" src="./img/recepie4.png" alt="portfolio">
+                                <button class="order-btn ">Show</button>
+
+                            </div>
+                            <div class="portfolio__text">
+                                <h2>Жареные креветки с перцем и чесноком</h2>
+                            </div>
+                        </div>
                     </div>
+                    <div id="on-items-bucket"></div>
+                    <div id="off-items-bucket" class="portfolio-container">
+                        <div class="portfolio__item" data-category="new">
+                            <div class="portfolio__card">
+                                <img class="portfolio__image" src="./img/recepie2.png" alt="portfolio">
+                                <button class="order-btn ">Show</button>
+                            </div>
+                            <div class="portfolio__text">
+                                <h2>Жареные креветки с перцем и чесноком</h2>
+                            </div>
+                        </div>
+                        <div class="portfolio__item" data-category="recomended">
+                            <div class="portfolio__card">
+                                <img class="portfolio__image" src="./img/recepie2.png" alt="portfolio">
+                                <button class="order-btn ">Show</button>
+
+                            </div>
+                            <div class="portfolio__text">
+                                <h2>Жареные креветки с перцем и чесноком</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="on-items-bucket"></div>
+                    <div id="off-items-bucket-1" class="portfolio-container">
+                        <div class="portfolio__item" data-category="recomended">
+                            <div class="portfolio__card">
+                                <img class="portfolio__image" src="./img/recepie3.png" alt="portfolio">
+                                <button class="order-btn ">Show</button>
+
+                            </div>
+                            <div class="portfolio__text">
+                                <h2>Жареные креветки с перцем и чесноком</h2>
+                            </div>
+                        </div>
+                        <div class="portfolio__item" data-category="recomended">
+                            <div class="portfolio__card">
+                                <img class="portfolio__image" src="./img/recepie4.png" alt="portfolio">
+                                <button class="order-btn ">Show</button>
+
+                            </div>
+                            <div class="portfolio__text">
+                                <h2>Жареные креветки с перцем и чесноком</h2>
+                            </div>
+                        </div>
+                        <div class="portfolio__item" data-category="new">
+                            <div class="portfolio__card">
+                                <img class="portfolio__image" src="./img/recepie2.png" alt="portfolio">
+                                <button class="order-btn ">Show</button>
+
+                            </div>
+                            <div class="portfolio__text">
+                                <h2>Жареные креветки с перцем и чесноком</h2>
+                            </div>
+                        </div>
+                        <div class="portfolio__item" data-category="new">
+                            <div class="portfolio__card">
+                                <img class="portfolio__image" src="./img/recepie2.png" alt="portfolio">
+                                <button class="order-btn ">Show</button>
+
+                            </div>
+                            <div class="portfolio__text">
+                                <h2>Жареные креветки с перцем и чесноком</h2>
+                            </div>
+                        </div>
+                        <!-- <div class="portfolio__item" data-category="recomended">
+                            <div class="portfolio__card">
+                                <img class="portfolio__image" src="./img/recepie4.png" alt="portfolio">
+                                <button class="order-btn ">Show</button>
+
+                            </div>
+                            <div class="portfolio__text">
+                                <h2>Жареные креветки с перцем и чесноком</h2>
+                            </div>
+                        </div> -->
+                    </div>
+
                 </div>
-                <div class="modal-overlay"></div>
             </div>
-            <div class="modal-frame modal-sous">
-                <div class="modal-body">
-                    <div class="modal-inner">
-                        <button id="close1" class="close"><i class="fa fa-times"></i></button>
-                        <p>Sous</p>
-                    </div>
-                </div>
-                <div class="modal-overlay"></div>
-            </div>
-            <!-- <div class="modal-frame modal-shrimp">
-                <div class="modal-body">
-                    <div class="modal-inner">
-                        <button id="close" class="close"><i class="fa fa-times"></i></button>
-                        <p>Shrimp</p>
-                    </div>
-                </div>
-                <div class="modal-overlay"></div>
-            </div> -->
         </div>
+
+        </div>
+
+
     </section>
+
 
 
     <footer class="footer mod-gray">
