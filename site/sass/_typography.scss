@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+$montserrat: 'Montserrat', sans-serif;
+$eb-garamond: 'EB Garamond';
+
+h1{
+    font-size: 35px;
+}
+h2{
+    font-size: 22px;
+}
+h3{
+    font-size: 18px;
+}
+h4{
+    font-size: 16px;
+}
+
+.navb-links{
+    a{
+        font-family: $montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 29px;
+    }
+}
+
+.gallery-thumbs .swiper-slide{
+    font-family: $eb-garamond;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 47px;
+    text-align: center;
+    letter-spacing: 0.015em;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active{
+    font-size: 32px;
+}
+
+.sf-recomentation .sf-recomendation-wrap .sf-heading h2 {
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    font-size: 24px;
+    color: #464646;
+}
+
+.sf-recepie-card__text{
+    h4{
+        font-family: $montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1D2138;
+    }
+    li{
+        font-family: $montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #5B5B5B;
+    }
+}
+
+.order-btn{
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+}
