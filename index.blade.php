@@ -35,11 +35,11 @@
         </div>
 
         <div class="navb-links">
-          <a class="nav-link nav-bar-links" href="/site/index.blade.php">ГЛАВНАЯ</a>
-          <a class="nav-link nav-bar-links" href="/site/menu.blade.php">МЕНЮ</a>
+          <a class="nav-link nav-bar-links" href="index.blade.php">ГЛАВНАЯ</a>
+          <a class="nav-link nav-bar-links" href="menu.blade.php">МЕНЮ</a>
           <!-- logo -->
-          <a class="logo" href="/site/index.blade.php"><img src="img/svg/Logo.svg" alt=""></a>
-          <a class="nav-link nav-bar-links" href="/site/recipie.blade.php">РЕЦЕПТЫ</a>
+          <a class="logo" href="index.blade.php"><img src="img/svg/Logo.svg" alt=""></a>
+          <a class="nav-link nav-bar-links" href="recipie.blade.php">РЕЦЕПТЫ</a>
           <a class="nav-link nav-bar-links" href="#">О НАС</a>
           <!-- <button class="btn button-outline  my-2 my-sm-0 mobile-mod" onchange="navbar()" type="submit">Контакты</button> -->
 
