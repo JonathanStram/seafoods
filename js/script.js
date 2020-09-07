@@ -124,8 +124,8 @@ let xhttp = new XMLHttpRequest();
 
 
 
-xhttp.onreadystatechange = function() {
-  if ( this.readyState == 4 && this.status == 200) {
+xhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
     signUp(this.responseText)
   }
 }
@@ -143,51 +143,51 @@ function signUp() {
     url: "https://sea-products-test.herokuapp.com/signup",
     contentType: 'application/json',
     data: JSON.stringify({
-      "password" : $(".sf_password").val(),
-      "role" : "ROLE_USER",
-      "phone" : "+380956435322",
-      "created" : "2020-07-26T11:42:14.521+03:00[Europe/Kiev]",
-      "name" : $(".sf_user-name").val(),
-      "email" : $(".sf_email").val()
-    }) 
-    
+      "password": $(".sf_password").val(),
+      "role": "ROLE_USER",
+      "phone": "+380956435322",
+      "created": "2020-07-26T11:42:14.521+03:00[Europe/Kiev]",
+      "name": $(".sf_user-name").val(),
+      "email": $(".sf_email").val()
+    })
+
   }).done(function () {
     console.log("It`s signed up!!!!!!!")
   });
- }
+}
 
 
 
 function logIn() {
 
-$.ajax({
-  method: "POST",
-  url: "https://sea-products-test.herokuapp.com/login",
-  contentType: 'application/json',
-  data: JSON.stringify({
-    "password" : $(".sf_login_pass").val(),
-    "email" : $(".sf_login_email").val()
-  }) 
-}).done(function () {
-  console.log("Access granded!!!!!!!")
-});
+  $.ajax({
+    method: "POST",
+    url: "https://sea-products-test.herokuapp.com/login",
+    contentType: 'application/json',
+    data: JSON.stringify({
+      "password": $(".sf_login_pass").val(),
+      "email": $(".sf_login_email").val()
+    })
+  }).done(function () {
+    console.log("Access granded!!!!!!!")
+  });
 }
 
 let click1 = $(".sf-sign_up");
 click1.on("click", function () {
-  console.log($(".sf_password").val(), $(".sf_email").val() , $(".sf_user-name").val())
+  console.log($(".sf_password").val(), $(".sf_email").val(), $(".sf_user-name").val())
 });
 
 
 //7. Tab filter
 
-$(function(){
+$(function () {
   $('.tab-button').click(function () {
-      $('.tab-section .active').removeClass('active');// .active削除
-      $(this).addClass('active');// クリックしたタブボタンに.active付与
-      $(".tab-section .show").removeClass('show');// .showを削除
-      const index = $(this).index();// クリックしたタブからインデックス番号を取得
-      $(".portfolio-container").eq(index).addClass('show');// クリックしたタブと同じインデックス番号をもつタブアイテムに.show付与
+    $('.tab-section .active').removeClass('active');// .active削除
+    $(this).addClass('active');// クリックしたタブボタンに.active付与
+    $(".tab-section .show").removeClass('show');// .showを削除
+    const index = $(this).index();// クリックしたタブからインデックス番号を取得
+    $(".portfolio-container").eq(index).addClass('show');// クリックしたタブと同じインデックス番号をもつタブアイテムに.show付与
   });
 });
 
@@ -199,7 +199,7 @@ $(function(){
 
 // function isThisTheEnd() {
 //   let numberLeft = $('#off-items-bucket .portfolio__item').length;
-  
+
 //   if(numberLeft == 0) {
 //     $('#load-more').hide();
 //   }
@@ -218,131 +218,223 @@ $(function(){
 
 //9. Menu Filter
 
-$(document).ready(function(){
-	
-	// Variables
-	var clickedTab = $(".tabs > .active");
-	var tabWrapper = $(".tab__content");
-	var activeTab = tabWrapper.find(".active");
-	var activeTabHeight = activeTab.outerHeight();
-	
-	// Show tab on page load
-	activeTab.show();
-	
-	// Set height of wrapper on page load
-	tabWrapper.height(activeTabHeight);
-	
-	$(".tabs > li").on("click", function() {
-		
-		// Remove class from active tab
-		$(".tabs > li").removeClass("active");
-		
-		// Add class active to clicked tab
-		$(this).addClass("active");
-		
-		// Update clickedTab variable
-		clickedTab = $(".tabs .active");
-		
-		// fade out active tab
-		activeTab.fadeOut(250, function() {
-			
-			// Remove active class all tabs
-			$(".tab__content > li").removeClass("active");
-			
-			// Get index of clicked tab
-			var clickedTabIndex = clickedTab.index();
+$(document).ready(function () {
 
-			// Add class active to corresponding tab
-			$(".tab__content > li").eq(clickedTabIndex).addClass("active");
-			
-			// update new active tab
-			activeTab = $(".tab__content > .active");
-			
-			// Update variable
-			activeTabHeight = activeTab.outerHeight();
-			
-			// Animate height of wrapper to new tab height
-			tabWrapper.stop().delay(50).animate({
-				height: activeTabHeight
-			}, 500, function() {
-				
-				// Fade in active tab
-				activeTab.delay(50).fadeIn(250);
-				
-			});
-		});
-	});
-	
-	// Variables
-	var colorButton = $(".colors li");
-	
-	colorButton.on("click", function(){
-		
-		// Remove class from currently active button
-		$(".colors > li").removeClass("active-color");
-		
-		// Add class active to clicked button
-		$(this).addClass("active-color");
-		
-		// Get background color of clicked
-		
-		// Change color of everything with class .text-color
-		$(".text-color").css("color", newColor);
+  // Variables
+  var clickedTab = $(".tabs > .active");
+  var tabWrapper = $(".tab__content");
+  var activeTab = tabWrapper.find(".active");
+  var activeTabHeight = activeTab.outerHeight();
+
+  // Show tab on page load
+  activeTab.show();
+
+  // Set height of wrapper on page load
+  tabWrapper.height(activeTabHeight);
+
+  $(".tabs > li").on("click", function () {
+
+    // Remove class from active tab
+    $(".tabs > li").removeClass("active");
+
+    // Add class active to clicked tab
+    $(this).addClass("active");
+
+    // Update clickedTab variable
+    clickedTab = $(".tabs .active");
+
+    // fade out active tab
+    activeTab.fadeOut(250, function () {
+
+      // Remove active class all tabs
+      $(".tab__content > li").removeClass("active");
+
+      // Get index of clicked tab
+      var clickedTabIndex = clickedTab.index();
+
+      // Add class active to corresponding tab
+      $(".tab__content > li").eq(clickedTabIndex).addClass("active");
+
+      // update new active tab
+      activeTab = $(".tab__content > .active");
+
+      // Update variable
+      activeTabHeight = activeTab.outerHeight();
+
+      // Animate height of wrapper to new tab height
+      tabWrapper.stop().delay(50).animate({
+        height: activeTabHeight
+      }, 500, function () {
+
+        // Fade in active tab
+        activeTab.delay(50).fadeIn(250);
+
+      });
+    });
+  });
+
+  // Variables
+  var colorButton = $(".colors li");
+
+  colorButton.on("click", function () {
+
+    // Remove class from currently active button
+    $(".colors > li").removeClass("active-color");
+
+    // Add class active to clicked button
+    $(this).addClass("active-color");
+
+    // Get background color of clicked
+
+    // Change color of everything with class .text-color
+    $(".text-color").css("color", newColor);
   });
 });
 
 
-//10. Product Popup
-$modal = $('.modal-meat');
-$modal1 = $('.modal-sous'); //clear
 
 
 
-function enterNewConvo() {
-  $('.create-chat-input').focus();
-}
+//11. req for get the products
+$(document).ready(function () {
+  var modalBody = "";
+  var modalDataSet = $(".modal-data-insert")
 
-function closeModal() {
-  	$modal.removeClass('active');
-    $modal.addClass('leave');
-}
+  var modalPopupGlobal = $('#sf_modal')
+  modalBody += "<div class='modal-frame modal-meat'>" +
+    "<div class='modal-body'>" + "<div class='modal-inner'>" +
+    "<button id='close' class='close'><i class='fa fa-times'></i></button><div class='modal-img'>" + "<img class='product-modal-img' src='' alt=''>" + "</div><h2 class='modal-data-insert'></h2><h4 class='modal-subtitle'></h4><div class='counter-modal-wrappe1'>"
+    + "<div id='decrease'>" + "<div class='line'></div>" + "</div>"
+    + "<div class='number'>0</div> <div id='increase'>" +
+    "<div class='line_hor'></div> <div class='line_vert'></div>" +
+    "</div>" +
+    "<div><span class='product-price'>0</span><span> грн</span></div>"
+    + "</div>"
+    + "<div class='modal-description-wrapper'>"
+    + "<div class='products-headings'>"
+    + "<div>" + "<h5>grfggfg</h5> <p>nfhgfgh</p>" + "</div>"
+    + "<div>" + "<h5>hjghjgj</h5> <p>gfgh</p>" + "</div>"
+    + "<div>" + "<h5>jhgjhg</h5> <p>hjgjhghgfgfhgf</p>" + "</div>"
+    + "</div><div class='product-description'>"
+    + "<p class='description'>mbanmsbdbasjhdbjahsbdhjabsjd</p>"
+    + "</div>"
+    + "</div>"
+    + "<button class='order-btn'>Заказать</button>"
+    + "</div>" +
+    "</div>" +
+    "<div class='modal-overlay'></div>"
+    + "</div>"
+  $.ajax({
+    url: "https://sea-products-test.herokuapp.com/v1/products?type=COMMON&page=0&size=4",
+    method: "GET",
 
-function closeModal1() { //clear
-    $modal1.removeClass('active');
-    $modal1.addClass('leave');
-}
+    success: function (data) {
+      console.log(data);
 
-$('.modal-popup').click(function() {
-  $modal.toggleClass('active');
-  $modal.removeClass('leave');
-  enterNewConvo();
-})
+      if (data.content) {
+        var dataArr = data.content;
 
-$('.modal-popup1').click(function() {
-  $modal1.toggleClass('active');
-  $modal1.removeClass('leave'); //crear
-  enterNewConvo();
-})
+        var menuItems = "";
+        var indexCount = 0;
+        var modalProductPopup = ""
+
+        for (let i = 0; i < dataArr.length; i++) {
+          menuItems += "<div class='products-menu__items'>" +
+            "<img src=" + dataArr[i].picture + " alt=''>" +
+            "<h2 class='product-prise'>" + dataArr[i].name + "<span>" + dataArr[i].price + " грн</span> </h2>" +
+            "<button id='show-btn' class='order-btn modal-popup sf-product-show-btn' data-index=" + indexCount++ + ">Show</button>" +
+            "</div>"
+        }
+
+        console.log(dataArr[0].name)
+        console.log(dataArr[0].picture)
+
+        //Counter FOR MODAL
+
+        $("#product-result").html(menuItems);
+        $('#product-modal').html(modalBody);
+
+        $(".sf-product-show-btn").each(function (index) {
+          let _this = $(this);
+          _this.on("click", function () {
+            let dataIndex = $(this).attr('data-index');
+            console.log(dataArr[dataIndex])
+            console.log(dataIndex)
+            $(".modal-data-insert").html(dataArr[dataIndex].name)
+            $("img.product-modal-img").attr("src", dataArr[dataIndex].picture)
+            $(".modal-subtitle").html(dataArr[dataIndex].weight * 1000 + " г")
+            $("p.description").html(dataArr[dataIndex].description)
+
+            let num = 0;
+            const counter = document.querySelector('.number');
+            const minus = document.getElementById('decrease');
+            const plus = document.getElementById('increase');
+
+            minus.addEventListener('click', function () {
+              if (num == "0") {
+                console.log()
+              } else {
+                changeNumber(-1)
+              }
+            });
+
+            plus.addEventListener('click', function () {
+              changeNumber(+1)
+            })
+
+            function changeNumber(val) {
+              num += val;
+              $(".product-price").html((dataArr[dataIndex].price * num).toFixed(2))
+              counter.innerHTML = num;
+            }
+
+            $('.modal-overlay').click(function () {
+              counter.innerHTML = 0
+              $(".product-price").html((0).toFixed(2))
+            })
+          })
+        })
+      }
+
+      //MODAL POPUP FOR PRODUCTS  
+      $modal = $('.modal-frame');
+      $modal1 = $('.modal-frame1')
+      $modal2 = $('.modal-frame2')
+
+      function enterNewConvo() {
+        $('.create-chat-input').focus();
+      }
+
+      function closeModal() {
+        $modal.removeClass('active');
+        $modal.addClass('leave');
+      }
 
 
-$('.modal-overlay').click(function() {
-  closeModal();
-  closeModal1(); //clear
-})
+      $('.modal-popup').click(function () {
+        $modal.toggleClass('active');
+        $modal.removeClass('leave');
+        enterNewConvo();
+      })
 
-$('#close').click(function() {
-    closeModal();
-})
+      $('.modal-overlay').click(function () {
+        closeModal();
+      })
 
-$('#close1').click(function() { //clear
-  closeModal1();
-})
+      $('#close').click(function () {
+        closeModal();
+      })
 
-  $(document).keyup(function(e) {
-    if(e.which === 27) {
-      closeModal();
-      closeModal1();
+      $(document).keyup(function (e) {
+        if (e.which === 27) {
+          closeModal();
+        }
+      })
+
+    },
+    error: function (jqXHR, textstatus, errorThrown) {
+      console.log("error")
     }
   })
-
+});
 
